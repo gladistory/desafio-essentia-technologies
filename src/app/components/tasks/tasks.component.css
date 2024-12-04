@@ -1,0 +1,163 @@
+@media (min-width: 1100px) {
+  .container {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+html {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  color: #141414;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+.d-flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-content-between {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.align-items-center {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.paddingBottom50 {
+  padding-bottom: 50px;
+}
+
+.maxW340 {
+  max-width: 340px;
+}
+
+.button-default {
+  border-radius: 4px;
+  background-color: #141414;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 48px;
+  width: 100%;
+  max-width: 336px;
+}
+
+.bt-add {
+  border-radius: 4px;
+  color: #141414;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 48px;
+  margin-top: 26px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.task-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.bt-add:hover {
+  background-color: #c4c4c4;
+  width: 100%;
+}
+
+.shadow-table {
+  box-shadow: 0px 8px 24px #00000029;
+  border-radius: 6px;
+  margin-top: 25px;
+}
+
+table {
+  width: 100%;
+}
+
+table thead tr {
+  height: 60px;
+  background: #141414;
+  color: #fff;
+  line-height: 60px;
+}
+
+table thead tr th {
+  padding: 0 0 0 23px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+table tbody tr td {
+  padding: 0 0 0 23px;
+  text-align: left;
+  height: 100px;
+  vertical-align: middle;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+table td .img-produto {
+  border: 1px solid #666666;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+table tfoot tr td {
+  padding: 0 23px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  table {
+    width: 1100px;
+  }
+
+  .page-login {
+    height: auto;
+    padding: 50px 15px;
+  }
+
+  form .bloco-inputs > div:nth-child(2n) {
+    margin-left: 0;
+  }
+}
