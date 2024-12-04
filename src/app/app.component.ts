@@ -11,4 +11,5 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 })
 export class AppComponent {
   title = 'Easy-Task';
+
 }

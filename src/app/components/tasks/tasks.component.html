@@ -13,13 +13,26 @@
         <div class="container">
             <div class="bt-add">
                 <img class="task-icon" src="task-done-svgrepo-com.svg" alt="">
-                <a href="#">Adicionar nova
+                <a href="#" (click)="toggleForm(); $event.preventDefault()">Adicionar nova
                     tarefa</a>
             </div>
             <div class="shadow-table">
 
             </div>
             <hr>
+            <div *ngIf="showForm" class="form-container">
+                <form>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Usuário</mat-label>
+                        <input matInput placeholder="Digite seu nome" />
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Digite seu email" />
+                    </mat-form-field>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>
