@@ -20,20 +20,21 @@
 
             </div>
             <hr>
-            <div *ngIf="showForm" class="form-container">
+            <div *ngIf="showForm" @fadeInOut class="form-container">
                 <form>
-                    <div>
-                        <label for="titulo">Título</label>
-                        <input id="titulo" type="text" placeholder="Digite o título da atividade" />
+                    <div class="form-input">
+                        <label for="data">Título</label>
+                        <input id="title" type="text" placeholder="Descreva sua atividade">
                     </div>
                     <div class="form-input">
-                        <label for="data"><img class="form-icon" src="description-svgrepo-com.svg" alt=""></label>
-                        <input id="descricao" type="text" placeholder="Descreva sua atividade" />
+                        <label for="data"><img class="form-icon" src="menu-alt-2-svgrepo-com.svg" alt=""></label>
+                        <textarea id="descricao" type="text" placeholder="Descreva sua atividade"></textarea>
                     </div>
-                    <div>
+                    <div class="input-date">
+                        <label for="data">Prazo</label>
                         <input id="data" type="date" />
                     </div>
-                    <div>
+                    <div class="div-button">
                         <button type="submit" class="button-default">Adicionar tarefa</button>
                     </div>
                 </form>

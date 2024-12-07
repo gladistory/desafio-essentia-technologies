@@ -63,12 +63,12 @@ a {
   background-color: #141414;
   color: #ffffff;
   border: none;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
   margin-top: 10px;
-  height: 48px;
+  height: 30px;
   width: 100%;
-  max-width: 336px;
+  max-width: 150px;
 }
 
 .bt-add {
@@ -95,6 +95,7 @@ a {
 .bt-add:hover {
   background-color: #c4c4c4;
   width: 100%;
+  transition: 1s ease;
 }
 /* formulário */
 form {
@@ -107,13 +108,85 @@ form {
   padding: 20px;
   background-color: #f5f5f5;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.283);
+}
+label {
+  margin-right: 5px;
 }
 
 /* Ajustes para os inputs */
+
+/* Efeito ao focar nos inputs */
+.form-input:focus {
+  outline: none; /* Remove borda padrão */
+  border-color: #aaa; /* Cor roxa para o foco */
+  box-shadow: 0 0 6px rgba(98, 0, 238, 0.4); /* Sombra leve */
+  background-color: #f9f9ff; /* Fundo ligeiramente destacado */
+}
+
+textarea {
+  border: none;
+  text-decoration: none;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  resize: none;
+}
+
 input {
+  border: none;
+  text-decoration: none;
+}
+input::placeholder {
+  color: #aaa; /* Cinza claro */
+  font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
+}
+
+input,
+textarea,
+select {
+  outline: 0;
+}
+
+textarea::placeholder {
+  color: #aaa; /* Cinza claro */
+  font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Estilização específica para data picker */
+.input-date {
+  padding: 6px 14px;
+  font-family: inherit; /* Usa a fonte padrão do formulário */
+  color: #141414;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 10px 14px; /* Espaçamento interno confortável */
+  font-size: 15px; /* Tamanho de texto maior */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  background-color: #fff;
+  box-sizing: border-box; /* Padding incluso no tamanho */
+  transition: all 0.3s ease; /* Transição suave para foco */
+}
+
+/* Adição de transição ao hover no input */
+.form-input:hover {
+  border-color: #888; /* Bordas levemente destacadas */
+}
+
+.form-input {
+  height: 35px;
+  display: flex;
+  align-items: center;
   width: 60%;
-  height: 30px; /* Altura ligeiramente maior */
   padding: 10px 14px; /* Espaçamento interno confortável */
   font-size: 15px; /* Tamanho de texto maior */
   color: #333; /* Cor do texto */
@@ -124,50 +197,14 @@ input {
   transition: all 0.3s ease; /* Transição suave para foco */
 }
 
-/* Efeito ao focar nos inputs */
-input:focus {
-  outline: none; /* Remove borda padrão */
-  border-color: #aaa; /* Cor roxa para o foco */
-  box-shadow: 0 0 6px rgba(98, 0, 238, 0.4); /* Sombra leve */
-  background-color: #f9f9ff; /* Fundo ligeiramente destacado */
-}
-
-/* Ajuste de placeholder */
-input::placeholder {
-  color: #aaa; /* Cinza claro */
-  font-style: italic; /* Estilo para distinguir do texto inserido */
-}
-
-/* Estilização específica para data picker */
-input[type="date"] {
-  padding: 6px 14px;
-  font-family: inherit; /* Usa a fonte padrão do formulário */
-  color: #141414;
-}
-
-/* Adição de transição ao hover no input */
-input:hover {
-  border-color: #888; /* Bordas levemente destacadas */
-}
-
-/* Ajuste de espaçamento responsivo */
-@media (max-width: 600px) {
-  label {
-    font-size: 12px; /* Reduz tamanho das labels */
-  }
-
-  input {
-    font-size: 14px;
-  }
-}
-
-.form-input {
-  height: 25px;
+.div-button {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .form-icon {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
