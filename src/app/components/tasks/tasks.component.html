@@ -22,16 +22,22 @@
             <hr>
             <div *ngIf="showForm" class="form-container">
                 <form>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Usuário</mat-label>
-                        <input matInput placeholder="Digite seu nome" />
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email" placeholder="Digite seu email" />
-                    </mat-form-field>
-                    <button type="submit">Enviar</button>
+                    <div>
+                        <label for="titulo">Título</label>
+                        <input id="titulo" type="text" placeholder="Digite o título da atividade" />
+                    </div>
+                    <div class="form-input">
+                        <label for="data"><img class="form-icon" src="description-svgrepo-com.svg" alt=""></label>
+                        <input id="descricao" type="text" placeholder="Descreva sua atividade" />
+                    </div>
+                    <div>
+                        <input id="data" type="date" />
+                    </div>
+                    <div>
+                        <button type="submit" class="button-default">Adicionar tarefa</button>
+                    </div>
                 </form>
+
             </div>
         </div>
     </section>

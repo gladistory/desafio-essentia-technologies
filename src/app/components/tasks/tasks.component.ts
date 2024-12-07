@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Necessário para animações do Angular Material
+import { Component, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field'; // MatFormFieldModule
 import { MatInputModule } from '@angular/material/input'; // MatInputModule
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-tasks',
@@ -12,9 +10,11 @@ import { MatInputModule } from '@angular/material/input'; // MatInputModule
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSlideToggleModule
   ],
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+  styleUrl: './tasks.component.css',
+  encapsulation: ViewEncapsulation.None, // Permite aplicar estilos globais
 })
 export class TasksComponent {
   showForm = false; // Controla a exibição do formulário
