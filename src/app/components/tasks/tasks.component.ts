@@ -1,7 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatFormFieldModule } from '@angular/material/form-field'; // MatFormFieldModule
-import { MatInputModule } from '@angular/material/input'; // MatInputModule
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -9,8 +7,6 @@ import { trigger, transition, style, animate } from '@angular/animations';
   selector: 'app-tasks',
   imports: [
     CommonModule,
-    MatFormFieldModule,
-    MatInputModule,
     MatSlideToggleModule
   ],
   templateUrl: './tasks.component.html',
