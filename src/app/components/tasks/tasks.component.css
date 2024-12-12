@@ -127,7 +127,7 @@ label {
 textarea {
   border: none;
   text-decoration: none;
-  height: 20px;
+  height: 60px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -152,6 +152,7 @@ select {
 textarea::placeholder {
   color: #aaa; /* Cinza claro */
   font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
+  padding-top: 20px;
 }
 
 label {
@@ -197,6 +198,21 @@ label {
   transition: all 0.3s ease; /* Transição suave para foco */
 }
 
+.form-input-desc {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  padding: 10px 14px; /* Espaçamento interno confortável */
+  font-size: 15px; /* Tamanho de texto maior */
+  color: #333; /* Cor do texto */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  background-color: #fff;
+  box-sizing: border-box; /* Padding incluso no tamanho */
+  transition: all 0.3s ease; /* Transição suave para foco */
+}
+
 .div-button {
   display: flex;
   align-items: center;
@@ -207,4 +223,40 @@ label {
 .form-icon {
   width: 20px;
   height: 20px;
+}
+
+/* Tabela Tasks */
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Combina as bordas das células */
+  margin-top: 20px; /* Adiciona espaço acima da tabela */
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Adiciona bordas às células */
+  padding: 8px; /* Adiciona preenchimento às células */
+  text-align: left; /* Alinha o texto à esquerda por padrão */
+}
+
+th {
+  background-color: #f2f2f2; /* Cor de fundo para o cabeçalho */
+  font-weight: bold;
+}
+
+/* Estilos para os botões (opcional) */
+.btn {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+}
+.btn-editar {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+.btn-deletar {
+  background-color: #f44336; /* Vermelho */
+  color: white;
 }
