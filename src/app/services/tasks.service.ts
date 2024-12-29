@@ -26,5 +26,15 @@ export class TasksService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
+  // Atualizar uma tarefa
+  updateTask(id: number, updatedTask: Task): Observable<Task> {
+    return this.http.put<Task>(`${this.apiUrl}/${id}`, updatedTask);
+  }
+
+    // Obter uma tarefa pelo ID
+    getTaskById(id: number): Observable<Task> {
+      return this.http.get<Task>(`${this.apiUrl}/${id}`);
+    }  
+
 
 }
