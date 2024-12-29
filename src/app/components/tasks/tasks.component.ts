@@ -5,13 +5,16 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { FormsModule } from '@angular/forms';
 import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../../Task';
+import { NgToastService, NgToastModule } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-tasks',
+  standalone: true,
   imports: [
     CommonModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
   ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
@@ -34,7 +37,9 @@ export class TasksComponent {
   tasks: Task[] = [];
   newTask: Task = {title: '', description: '', time: '', status: ''}
 
-  constructor(private taskService: TasksService) {}
+  constructor(private taskService: TasksService,
+    private toast: NgToastService
+  ) {}
 
   ngOnInit(): void {
     this.getAllTasks();
@@ -56,7 +61,7 @@ export class TasksComponent {
   // Add a new task
   addTask(): void {
     if (!this.newTask.title || !this.newTask.description || !this.newTask.time || !this.newTask.status) {
-      alert('Por favor, preencha todos os campos');
+      this.showWarning();
       return;
     }
 
@@ -66,7 +71,7 @@ export class TasksComponent {
         this.newTask = { title: '', description: '', time: '', status: '' }; // Clear form
       },
       error: (error) => console.error(error),
-      complete: () => console.log('task creation completed'),
+      complete: () => this.showSuccess(),
     });
     
   }
@@ -81,7 +86,7 @@ export class TasksComponent {
     if (confirm('Deseja realmente deletar essa tarefa?')) {
       this.taskService.deleteTask(id).subscribe({
         next: () => {
-          console.log(`Task ${id} deleted successfully`);
+          this.showSuccess();
           this.getAllTasks();
         },
         error: (error) => {
@@ -90,5 +95,16 @@ export class TasksComponent {
       });
     }
   }
+
+showSuccess() {
+  this.toast.success('Operação realizada com sucesso!');
+  }
+
+  // Aviso
+  showWarning(): void {
+    this.toast.warning('Todos os campos devem ser preenchidos!');
+  }
+
+
 
 }
