@@ -5,6 +5,9 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 Clonar o repositório
 https://github.com/gladistory/desafio-essentia-technologies/tree/Vini
 
+Passo a passo para uso da API
+https://github.com/gladistory/api-easyTask
+
 
 ## Development server
 
