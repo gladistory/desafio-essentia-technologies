@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../../Task';
 import { NgToastService, NgToastModule } from 'ng-angular-popup';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-tasks',
@@ -14,7 +16,7 @@ import { NgToastService, NgToastModule } from 'ng-angular-popup';
     CommonModule,
     MatSlideToggleModule,
     FormsModule,
-    NgToastModule
+    NgToastModule,
   ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
@@ -97,12 +99,12 @@ export class TasksComponent {
   }
 
 showSuccess() {
-  this.toast.success('Operação realizada com sucesso!');
+  this.toast.success('Operação realizada com sucesso!', '', 5000);
   }
 
   // Aviso
-  showWarning(): void {
-    this.toast.warning('Todos os campos devem ser preenchidos!');
+showWarning(): void {
+    this.toast.warning('Todos os campos devem ser preenchidos!', '', 5000);
   }
 
 

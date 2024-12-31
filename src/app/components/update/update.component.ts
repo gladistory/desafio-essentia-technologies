@@ -4,6 +4,7 @@ import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../../Task';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgToastService, NgToastModule } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-update',
@@ -18,7 +19,8 @@ export class UpdateComponent {
   constructor(
      private taskService: TasksService,
      private router:Router,
-     private route:ActivatedRoute
+     private route:ActivatedRoute,
+     private toast: NgToastService
     ) {}
 
   ngOnInit(): void {
@@ -45,12 +47,20 @@ export class UpdateComponent {
   
     this.taskService.updateTask(this.task.id, this.task).subscribe({
       next: () => {
-        alert(`Task ${this.task.id} updated successfully`);
+        this.showSuccess();
         this.router.navigate(['/tasks']); // Redirecionar após o update
       },
-      error: (err) => console.error('Error updating task:', err),
+      error: (err) => this.showWarning(),
     });
   }
+
+  showSuccess() {
+    this.toast.success('Operação realizada com sucesso!');
+    }
   
+    // Aviso
+  showWarning(): void {
+      this.toast.warning('Todos os campos devem ser preenchidos!');
+    }
 
 }
