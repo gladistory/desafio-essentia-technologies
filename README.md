@@ -18,6 +18,6 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 # API Easy-Task
 
-Instruções para uso da API - https://github.com/gladistory/api-easyTask/new/master?filename=README.md
+Instruções para uso da API - https://github.com/gladistory/api-easyTask/
 
 
