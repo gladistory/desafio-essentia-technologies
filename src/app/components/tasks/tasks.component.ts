@@ -1,12 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { FormsModule } from '@angular/forms';
 import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../../Task';
 import { NgToastService, NgToastModule } from 'ng-angular-popup';
-import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -14,7 +12,6 @@ import { Title } from '@angular/platform-browser';
   standalone: true,
   imports: [
     CommonModule,
-    MatSlideToggleModule,
     FormsModule,
     NgToastModule,
   ],

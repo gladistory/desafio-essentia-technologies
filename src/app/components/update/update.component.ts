@@ -4,7 +4,7 @@ import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../../Task';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgToastService, NgToastModule } from 'ng-angular-popup';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-update',
